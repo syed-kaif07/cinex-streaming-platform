@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-black: #000000;
+    --color-surface: #141414;
+    --color-card: #181818;
+    --color-red: #E50914;
+    --color-red-hover: #F40612;
+    --color-text: #FFFFFF;
+    --color-muted: #B3B3B3;
+    --color-border: #333333;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #E50914;
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    height: 4px;
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #141414;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E50914;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-cinex-red hover:bg-cinex-red-hover text-white font-semibold px-6 py-2 rounded transition-colors duration-200 flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white/20 hover:bg-white/30 text-white font-semibold px-6 py-2 rounded backdrop-blur-sm transition-colors duration-200 flex items-center gap-2;
+  }
+
+  .input-field {
+    @apply w-full bg-[#333] border border-[#555] text-white rounded px-4 py-3 placeholder-[#8c8c8c] focus:outline-none focus:border-white transition-colors duration-200;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+  }
+
+  .row-scroll {
+    @apply flex gap-3 overflow-x-auto pb-2;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+  }
+
+  .row-scroll::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .movie-card {
+    @apply flex-shrink-0 rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-110 hover:z-10 relative;
+    width: 200px;
+    height: 300px;
+  }
+}

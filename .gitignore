@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.env
+.env.local
+dist/
+build/
+coverage/
+cinex-backend/node_modules/
+cinex-frontend/node_modules/
+cinex-monorepo/node_modules/
+cinex-monorepo/frontend/node_modules/
+cinex-monorepo/backend/node_modules/
